@@ -10,6 +10,7 @@ abstract contract ImplicitFixedBalanceToken is ImplicitBalanceToken {
   }
 
   function _implicitBalanceOf (address account) override internal view returns (uint) {
+    account = account;
     return _base;
   }
 }
