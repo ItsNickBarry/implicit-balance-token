@@ -10,8 +10,9 @@ Included are several `abstract` contracts containing basic implementation of an 
 
 | contract | constructor signature | description |
 |-|-|-|
-| `ImplicitFixedBalanceToken` | <code>uint&nbsp;base</code> | each account is allocated an implicit balance equal to `base` |
+| `ImplicitFixedBalanceToken` | <code>uint&nbsp;base</code> | each account is allocated an implicit balance equal to `base`; `base` is `immutable` and may not be updated |
 | `ImplicitRandomBalanceToken` | <code>uint&nbsp;min, uint&nbsp;mod, uint&nbsp;mul</code> |  each account is allocated an implicit balance between `min * mul` and `(min + mod) * mul`, determined by the `uint` representation of its `address` |
+| `ImplicitVariableBalanceToken` | <code>uint&nbsp;base</code> | each account is allocated an implicit balance equal to the value of `base` at the time of account activation; `base` may be updated |
 
 ## Development
 
