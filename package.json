@@ -2,6 +2,21 @@
   "name": "implicit-balance-token",
   "private": true,
   "version": "0.0.0",
+  "license": "UNLICENSED",
+  "description": "Gasless ERC20 token disribution for virtual airdrops",
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "blockchain",
+    "erc20",
+    "token",
+    "airdrop",
+    "wow"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsNickBarry/implicit-balance-token.git"
+  },
   "devDependencies": {
     "@nomiclabs/buidler": "^1.3.1",
     "@nomiclabs/buidler-truffle5": "^1.3.1",
