@@ -1,5 +1,6 @@
 usePlugin('@nomiclabs/buidler-truffle5');
 usePlugin('buidler-gas-reporter');
+usePlugin('buidler-spdx-license-identifier');
 usePlugin('solidity-coverage');
 
 module.exports = {
@@ -24,5 +25,10 @@ module.exports = {
   gasReporter: {
     enabled: !!process.env.REPORT_GAS,
     gasPrice: 1,
+  },
+
+  spdxLicenseIdentifier: {
+    overwrite: false,
+    runOnCompile: true,
   },
 };
