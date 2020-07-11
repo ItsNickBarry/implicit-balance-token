@@ -11,8 +11,7 @@ abstract contract ImplicitVariableBalanceToken is ImplicitBalanceToken {
     _base = base;
   }
 
-  function _implicitBalanceOf (address account) override internal view returns (uint) {
-    account = account;
+  function _implicitBalanceOf (address) override internal view returns (uint) {
     return _base;
   }
 }
