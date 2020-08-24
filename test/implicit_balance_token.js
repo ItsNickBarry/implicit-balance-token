@@ -14,7 +14,7 @@ contract('ImplicitBalanceToken', function (accounts) {
     instance = await IFBT.new(BASE, { from: accounts[0] });
   });
 
-  // describe('#balanceOf'); // see mock contract tests
+  // describe('#balanceOf'); // see derived contract tests
 
   describe('#totalSupply', function () {
     it('increments on contract interaction', async function () {

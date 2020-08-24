@@ -11,7 +11,7 @@ abstract contract ImplicitBalanceToken is ERC20 {
     return _balances[account] + (_claimed[account] ? 0 : _implicitBalanceOf(account));
   }
 
-  function _beforeTokenTransfer (address from, address to, uint256 amount) virtual override internal {
+  function _beforeTokenTransfer (address from, address to, uint amount) virtual override internal {
     if (!_claimed[from]) {
       uint implicitBalance = _implicitBalanceOf(from);
       _balances[from] += implicitBalance;

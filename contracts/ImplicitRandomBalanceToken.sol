@@ -16,7 +16,7 @@ abstract contract ImplicitRandomBalanceToken is ImplicitBalanceToken {
     _mul = mul;
   }
 
-  function _implicitBalanceOf (address account) override internal view returns (uint) {
+  function _implicitBalanceOf (address account) virtual override internal view returns (uint) {
     return (uint(account) % _mod + _min) * _mul;
   }
 }
