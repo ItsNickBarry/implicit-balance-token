@@ -7,7 +7,7 @@ import './ImplicitBalanceToken.sol';
 abstract contract ImplicitVariableBalanceToken is ImplicitBalanceToken {
   uint internal _base;
 
-  constructor (uint base) internal {
+  constructor (uint base) {
     _base = base;
   }
 

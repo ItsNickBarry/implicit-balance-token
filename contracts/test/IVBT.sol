@@ -5,7 +5,7 @@ pragma solidity ^0.7.0;
 import '../ImplicitVariableBalanceToken.sol';
 
 contract IVBT is ImplicitVariableBalanceToken {
-  constructor (uint base) public
+  constructor (uint base)
   ERC20('', '')
   ImplicitVariableBalanceToken(base)
   {}

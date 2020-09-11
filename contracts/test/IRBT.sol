@@ -5,7 +5,7 @@ pragma solidity ^0.7.0;
 import '../ImplicitRandomBalanceToken.sol';
 
 contract IRBT is ImplicitRandomBalanceToken {
-  constructor (uint min, uint mod, uint mul) public
+  constructor (uint min, uint mod, uint mul)
   ERC20('', '')
   ImplicitRandomBalanceToken(min, mod, mul)
   {}

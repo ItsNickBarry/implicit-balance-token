@@ -7,7 +7,7 @@ import './ImplicitBalanceToken.sol';
 abstract contract ImplicitFixedBalanceToken is ImplicitBalanceToken {
   uint internal immutable _base;
 
-  constructor (uint base) internal {
+  constructor (uint base) {
     _base = base;
   }
 

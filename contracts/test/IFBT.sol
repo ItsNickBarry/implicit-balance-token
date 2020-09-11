@@ -5,7 +5,7 @@ pragma solidity ^0.7.0;
 import '../ImplicitFixedBalanceToken.sol';
 
 contract IFBT is ImplicitFixedBalanceToken {
-  constructor (uint base) public
+  constructor (uint base)
   ERC20('', '')
   ImplicitFixedBalanceToken(base)
   {}

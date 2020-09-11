@@ -9,7 +9,7 @@ abstract contract ImplicitRandomBalanceToken is ImplicitBalanceToken {
   uint internal immutable _mod;
   uint internal immutable _mul;
 
-  constructor (uint min, uint mod, uint mul) internal {
+  constructor (uint min, uint mod, uint mul) {
     require(mod > 0, 'ImplicitRandomBalanceToken: mod must be greater than zero');
     _min = min;
     _mod = mod;
