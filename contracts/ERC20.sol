@@ -37,13 +37,13 @@ contract ERC20 is Context, IERC20 {
 
     mapping (address => uint256) internal _balances;
 
-    mapping (address => mapping (address => uint256)) private _allowances;
+    mapping (address => mapping (address => uint256)) internal _allowances;
 
     uint256 internal _totalSupply;
 
-    string private _name;
-    string private _symbol;
-    uint8 private _decimals;
+    string internal _name;
+    string internal _symbol;
+    uint8 internal _decimals;
 
     /**
      * @dev Sets the values for {name} and {symbol}, initializes {decimals} with
@@ -63,7 +63,7 @@ contract ERC20 is Context, IERC20 {
     /**
      * @dev Returns the name of the token.
      */
-    function name() public view returns (string memory) {
+    function name() virtual public view returns (string memory) {
         return _name;
     }
 
@@ -71,7 +71,7 @@ contract ERC20 is Context, IERC20 {
      * @dev Returns the symbol of the token, usually a shorter version of the
      * name.
      */
-    function symbol() public view returns (string memory) {
+    function symbol() virtual public view returns (string memory) {
         return _symbol;
     }
 
@@ -88,7 +88,7 @@ contract ERC20 is Context, IERC20 {
      * no way affects any of the arithmetic of the contract, including
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
-    function decimals() public view returns (uint8) {
+    function decimals() virtual public view returns (uint8) {
         return _decimals;
     }
 
